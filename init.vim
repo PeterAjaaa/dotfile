@@ -201,7 +201,7 @@ nnoremap <silent>    <A-0> <Cmd>BufferLast<CR>
 " Pin/unpin buffer
 nnoremap <silent>    <A-p> <Cmd>BufferPin<CR>
 " Close buffer
-nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
+nnoremap <silent>    <A-c> <Cmd>bdelete!<CR>
 " Wipeout buffer
 "                          :BufferWipeout
 " Close commands
@@ -225,5 +225,7 @@ nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
 " User defined keybinding
 nnoremap <C-o> :NERDTreeToggle %<CR>
 nnoremap <C-n> :NERDTree <CR>
+nnoremap <C-t> :NERDTreeToggle <CR>
+nnoremap <A-t> :terminal <CR>
 
 colorscheme nord
