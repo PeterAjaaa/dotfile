@@ -118,6 +118,7 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 . "$HOME/.cargo/env"
+
 bind -x $'"\C-l":clear;'
 alias ls='ls -la --color=auto'
 alias rm='echo "Do NOT use rm directly! -past me-";false;'
