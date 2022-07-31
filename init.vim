@@ -13,7 +13,7 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 set mouse+=a
-set rtp+=/usr/bin/fzf
+set clipboard+=unnamedplus
 
 call plug#begin()
 
