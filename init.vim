@@ -14,6 +14,7 @@ set updatetime=300
 set shortmess+=c
 set mouse+=a
 set clipboard+=unnamedplus
+set rnu
 
 call plug#begin()
 
@@ -245,4 +246,5 @@ nnoremap <C-f> :Rg!
 
 let NERDTreeShowHidden=1
 let g:airline#extensions#coc#enabled = 1
+let g:airline_powerline_fonts = 1
 colorscheme nord
