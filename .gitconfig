@@ -1,0 +1,15 @@
+[user]
+	name = 
+	email = 
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
+[core]
+	editor = nvim 
