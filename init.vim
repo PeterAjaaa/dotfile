@@ -35,10 +35,10 @@ Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 call plug#end()
 
 " This fixes the stacked symbols in the Airline bar
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.colnr = " "
+"if !exists('g:airline_symbols')
+"    let g:airline_symbols = {}
+"endif
+" let g:airline_symbols.colnr = " "
 
 "" Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
