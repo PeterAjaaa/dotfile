@@ -25,7 +25,6 @@ format = "/home {available}"
 block = "memory"
 display_type = "memory"
 format_mem = "RAM {mem_used_percents}"
-format_swap = "Swap {swap_used_percents}"
 
 [[block]]
 block = "cpu"
@@ -40,6 +39,11 @@ headphones_indicator = true
 
 [[block]]
 block = "uptime"
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage} {time}"
 
 [[block]]
 block = "time"
