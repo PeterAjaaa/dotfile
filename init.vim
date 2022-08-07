@@ -15,6 +15,7 @@ set shortmess+=c
 set mouse+=a
 set clipboard+=unnamedplus
 set rnu
+set termguicolors
 
 call plug#begin()
 
@@ -29,7 +30,7 @@ Plug 'preservim/nerdtree' |
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ellisonleao/glow.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
