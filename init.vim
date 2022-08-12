@@ -5,7 +5,7 @@ set hlsearch
 set ignorecase 
 set incsearch 
 filetype plugin indent on
-set ts=4 sts=2 sw=2 et ai si
+set ts=4 sts=4 sw=4 ai si
 set hidden
 set nobackup
 set nowritebackup
@@ -16,6 +16,7 @@ set mouse+=a
 set clipboard+=unnamedplus
 set rnu
 set termguicolors
+set spelllang=en_US
 
 call plug#begin()
 
@@ -34,6 +35,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
+
+nnoremap <silent> <F12> :set spell!<CR>
+inoremap <silent> <F12> <C-O>:set spell!<CR>
 
 " This fixes the stacked symbols in the Airline bar
 "if !exists('g:airline_symbols')
