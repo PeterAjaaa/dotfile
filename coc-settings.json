@@ -1,4 +1,6 @@
 {
-"rust-analyzer.server.path": "/home/nolaifu/.cargo/bin/rust-analyzer",
-"rust-analyzer.updates.checkOnStartup": true
+	"rust-analyzer.server.path": "/home/nolaifu/.cargo/bin/rust-analyzer",
+	"rust-analyzer.updates.checkOnStartup": true
 }
+
+
