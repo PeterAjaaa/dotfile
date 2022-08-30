@@ -120,6 +120,7 @@ source "$OSH"/oh-my-bash.sh
 . "$HOME/.cargo/env"
 
 bind -x $'"\C-l":clear;'
+export EDITOR='/usr/bin/nvim'
 alias ls='ls -la --color=auto'
 alias rm='echo "Do NOT use rm directly! -past me-";false;'
 alias i3-edit='nvim .config/i3/config'
