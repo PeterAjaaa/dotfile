@@ -194,14 +194,14 @@ exec --no-startup-id picom
 
 # Set i3 bar with i3status-rust
 bar {
-    font pango: JetBrainsMono Nerd Font Mono
-    position top
-    status_command /usr/bin/i3status-rs .config/i3status-rust/config.toml
-    colors {
-     background #2E3440
-     focused_workspace #FFFFFF #434C5E
-    }
-    }
+	font pango: JetBrainsMono Nerd Font Mono
+		position top
+		status_command /usr/bin/i3status-rs .config/i3status-rust/config.toml
+		colors {
+			background #2E3440
+				focused_workspace #FFFFFF #434C5E
+		}
+}
 
 # Normal screenshot
 bindsym Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
@@ -228,3 +228,6 @@ bindsym F1 exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle && 
 bindsym F2 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym F3 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+exec discord
+exec --no-startup-id nitrogen --restore &
