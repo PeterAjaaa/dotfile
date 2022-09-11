@@ -32,6 +32,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
@@ -257,3 +258,4 @@ let NERDTreeShowHidden=1
 let g:airline#extensions#coc#enabled = 1
 let g:airline_powerline_fonts = 1
 colorscheme nord
+highlight Normal ctermbg=NONE guibg=NONE
