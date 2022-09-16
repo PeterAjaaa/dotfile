@@ -154,3 +154,5 @@ alias matkul='~/Data/Univ/Mata\ Kuliah/'
 alias bashrc-edit='nvim ~/.bashrc'
 alias docker-start='sudo systemctl start --now docker'
 alias docker-end='sudo systemctl disable --now docker'
+cd() { builtin cd "$@" && ls; }
+
