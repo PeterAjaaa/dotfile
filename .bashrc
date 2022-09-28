@@ -121,7 +121,7 @@ source "$OSH"/oh-my-bash.sh
 
 bind -x $'"\C-l":clear;'
 export EDITOR='/usr/bin/nvim'
-alias ls='ls -la --color=auto'
+alias ls='ls -lah --color=auto'
 alias rm='echo "Do NOT use rm directly! -past me-";false;'
 alias i3-edit='nvim .config/i3/config'
 alias i3status-edit='nvim .config/i3status-rust/config.toml'
@@ -154,5 +154,6 @@ alias matkul='~/Data/Univ/Mata\ Kuliah/'
 alias bashrc-edit='nvim ~/.bashrc'
 alias docker-start='sudo systemctl start --now docker'
 alias docker-end='sudo systemctl disable --now docker'
+alias check-governor='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 cd() { builtin cd "$@" && ls; }
 
