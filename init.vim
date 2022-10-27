@@ -262,7 +262,7 @@ colorscheme nord
 highlight Normal ctermbg=NONE guibg=NONE
 let g:silicon = {
       \   'theme':				   'Nord',
-      \   'font':                  'Hack',
+      \   'font':                  'JetBrainsMonoNL Nerd Font Mono',
       \   'background':         '#AAAAFF',
       \   'shadow-color':       '#555555',
       \   'line-pad':                   2,
