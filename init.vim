@@ -33,6 +33,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'krivahtoo/silicon.nvim', { 'do': './install.sh' }
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
