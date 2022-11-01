@@ -13,3 +13,5 @@
 	colorMoved = zebra
 [core]
 	editor = nvim 
+[protocol "file"]
+	allow = always
