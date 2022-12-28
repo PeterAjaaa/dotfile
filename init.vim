@@ -254,7 +254,8 @@ nnoremap <A-t> :terminal <CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-g> :GFiles<CR>
-nnoremap <C-f> :Rg! 
+"Doesn't really use Rg anyway
+"nnoremap <C-f> :Rg! 
 
 let NERDTreeShowHidden=1
 let g:airline#extensions#coc#enabled = 1
