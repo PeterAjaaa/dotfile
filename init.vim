@@ -34,6 +34,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'segeljakt/vim-silicon'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
@@ -275,3 +276,14 @@ let g:silicon = {
       \   'round-corner':          v:true,
       \   'window-controls':       v:true,
       \ }
+
+lua <<EOF
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+
+require("indent_blankline").setup {
+    show_end_of_line = true,
+    space_char_blankline = " ",
+}
+EOF
