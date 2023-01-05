@@ -155,5 +155,7 @@ alias bashrc-edit='nvim ~/.bashrc'
 alias docker-start='sudo systemctl start --now docker'
 alias docker-end='sudo systemctl disable --now docker'
 alias check-governor='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
+alias powersave='sudo x86_energy_perf_policy --turbo-enable 0 && sudo cpupower frequency-set -g powersave && sudo x86_energy_perf_policy 15 && check-governor'
+alias maxperformance='sudo x86_energy_perf_policy --turbo-enable 1 && sudo cpupower frequency-set -g performance && sudo x86_energy_perf_policy 0 && check-governor'
 cd() { builtin cd "$@" && ls; }
 
