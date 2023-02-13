@@ -216,11 +216,11 @@ bindsym $mod+F4 exec shutdown -h now
 bindsym $mod+F5 exec reboot
 
 # Set browser keybinding
-bindsym $mod+Home exec chromium
+bindsym $mod+Home exec firefox
 
 # Program to workspace assignment
 assign [class="Alacritty"] 1
-assign [class="Chromium"] 2
+assign [class="firefox"] 2
 assign [class="Discord"] 3
 assign [class="Steam"] 4
 
@@ -231,3 +231,6 @@ bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle
 
 exec discord
 exec --no-startup-id nitrogen --restore &
+exec gnome-keyring-daemon --start
+exec nm-applet
+exec sh ~/livewallpaper.sh &
