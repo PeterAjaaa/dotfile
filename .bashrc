@@ -123,7 +123,7 @@ bind -x $'"\C-l":clear;'
 export EDITOR='/usr/bin/nvim'
 alias ls='ls -lah --color=auto'
 alias rm='echo "Do NOT use rm directly! -past me-";false;'
-alias i3-edit='nvim .config/i3/config'
+alias i3-edit='nvim ~/.config/i3/config'
 alias i3status-edit='nvim .config/i3status-rust/config.toml'
 alias picom-edit='nvim .config/picom.conf'
 # alias tar='tar -xzvf'
@@ -159,3 +159,5 @@ alias powersave='sudo x86_energy_perf_policy --turbo-enable 0 && sudo cpupower f
 alias maxperformance='sudo x86_energy_perf_policy --turbo-enable 1 && sudo cpupower frequency-set -g performance && sudo x86_energy_perf_policy 0 && check-governor'
 cd() { builtin cd "$@" && ls; }
 
+# Created by `pipx` on 2023-01-16 10:14:09
+export PATH="$PATH:/home/nolaifu/.local/bin"
