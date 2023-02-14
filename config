@@ -230,7 +230,8 @@ bindsym F3 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +10% && 
 bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 exec discord
-exec --no-startup-id nitrogen --restore &
+# exec --no-startup-id nitrogen --restore &
 exec gnome-keyring-daemon --start
 exec nm-applet
 exec sh ~/livewallpaper.sh &
+exec play ~/Data/HK416-Voice-Line/hk416-hello.ogg
