@@ -1,44 +1,53 @@
+[theme]
 theme = "nord-dark"
+
+[icons]
 icons = "material-nf"
 
 [[block]]
 block = "disk_space"
-path = "/mnt"
+path = "/"
 info_type = "available"
-unit = "GB"
+alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
-format = "/ {available}"
+format = " $icon root: $available.eng(w:2) "
 
 [[block]]
 block = "disk_space"
 path = "/home"
 info_type = "available"
-unit = "GB"
+alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
-format = "/home {available}"
-
-[[block]]
-block = "memory"
-display_type = "memory"
-format_mem = "RAM {mem_used_percents}"
+format = " $icon home: $available.eng(w:2) "
 
 [[block]]
 block = "cpu"
-format = "CPU {utilization}"
+format = " $icon $utilization $frequency "
 
 [[block]]
-interval = 5
+block = "memory"
+format = " $icon $mem_total_used_percents.eng(w:2) " 
+
+[[block]]
+block = "temperature"
+format = " $icon $average avg "
+format_alt = " $icon $min min, $max max, $average avg "
+interval = 10
+chip = "*-isa-*"
+
+[[block]]
+block = "backlight"
+device = "intel_backlight"
 
 [[block]]
 block = "sound"
+format = " $icon { $volume|} "
+natural_mapping = true
 headphones_indicator = true
-
-[[block]]
-block = "uptime"
 
 [[block]]
 block = "battery"
@@ -46,6 +55,11 @@ driver = "upower"
 format = "{percentage} {time}"
 
 [[block]]
+block = "uptime"
+interval = 1
+
+[[block]]
 block = "time"
-interval = 5
-format = "%a %d/%m %R"
+interval = 1
+[block.format]
+short = " $icon $timestamp.datetime(f:%R) "
