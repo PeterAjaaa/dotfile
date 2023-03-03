@@ -18,6 +18,9 @@ set rnu
 set termguicolors
 set spelllang=en_US
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
+
 call plug#begin()
 
 Plug 'andweeb/presence.nvim'
@@ -35,6 +38,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'segeljakt/vim-silicon'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'tpope/vim-eunuch'
+Plug 'yuezk/vim-js'
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
