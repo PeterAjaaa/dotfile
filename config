@@ -196,7 +196,7 @@ exec --no-startup-id picom
 bar {
 	font pango: JetBrainsMono Nerd Font Mono
 		position top
-		status_command /usr/bin/i3status-rs .config/i3status-rust/config.toml
+		status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
 		colors {
 			background #2E3440
 				focused_workspace #FFFFFF #434C5E
@@ -232,6 +232,6 @@ bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle
 exec alacritty
 # exec discord
 # exec --no-startup-id nitrogen --restore &
-exec --no-startup-id--no-startup-id  gnome-keyring-daemon --start
+exec --no-startup-id  gnome-keyring-daemon --start
 exec sh ~/livewallpaper.sh &
 exec play ~/Data/HK416-Voice-Line/hk416-hello.ogg
