@@ -221,7 +221,7 @@ bindsym $mod+Home exec firefox
 # Program to workspace assignment
 assign [class="Alacritty"] 1
 assign [class="firefox"] 2
-assign [class="google-chrome-stable"] 2
+assign [class="Google-chrome"] 2
 assign [class="Discord"] 3
 assign [class="Steam"] 4
 
