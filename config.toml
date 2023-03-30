@@ -4,15 +4,16 @@ theme = "nord-dark"
 [icons]
 icons = "material-nf"
 
-[[block]]
-block = "disk_space"
-path = "/"
-info_type = "available"
-alert_unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
-format = " $icon root: $available.eng(w:2) "
+# Commented out because the use of single partition
+#[[block]]
+#block = "disk_space"
+#path = "/"
+#info_type = "available"
+#alert_unit = "GB"
+#interval = 20
+#warning = 20.0
+#alert = 10.0
+#format = " $icon root: $available.eng(w:2) "
 
 [[block]]
 block = "disk_space"
@@ -52,7 +53,7 @@ headphones_indicator = true
 [[block]]
 block = "battery"
 driver = "upower"
-format = "{percentage} {time}"
+format = " $icon $percentage $time "
 
 [[block]]
 block = "uptime"
