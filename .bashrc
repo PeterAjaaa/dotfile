@@ -117,8 +117,6 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-. "$HOME/.cargo/env"
-
 bind -x $'"\C-l":clear;'
 export EDITOR='/usr/bin/nvim'
 alias ls='ls -lah --color=auto'
@@ -155,9 +153,10 @@ alias bashrc-edit='nvim ~/.bashrc'
 alias docker-start='sudo systemctl start --now docker'
 alias docker-end='sudo systemctl disable --now docker'
 alias check-governor='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-alias powersave='x86_energy_perf_policy --turbo-enable 0 && sudo cpupower frequency-set -g powersave && sudo x86_energy_perf_policy 15 && check-governor'
+alias powersave='sudo x86_energy_perf_policy --turbo-enable 0 && sudo cpupower frequency-set -g powersave && sudo x86_energy_perf_policy 15 && check-governor'
 alias maxperformance='sudo x86_energy_perf_policy --turbo-enable 1 && sudo cpupower frequency-set -g performance && sudo x86_energy_perf_policy 0 && check-governor'
 cd() { builtin cd "$@" && ls; }
 
 # Created by `pipx` on 2023-01-16 10:14:09
 export PATH="$PATH:/home/nolaifu/.local/bin"
+source /usr/share/nvm/init-nvm.sh
