@@ -34,7 +34,6 @@ Plug 'preservim/nerdtree' |
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'segeljakt/vim-silicon'
 Plug 'lukas-reineke/indent-blankline.nvim'
