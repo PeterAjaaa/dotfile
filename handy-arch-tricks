@@ -1,0 +1,1 @@
+to run COH2 (Company Of Heroes 2), install libxcrypt-compat (it's on core repository), since the game won't run without it (it's missing the .so file).
