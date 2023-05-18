@@ -47,7 +47,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl -- set-source-mute @DEFAULT_
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -230,9 +230,12 @@ bindsym F2 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -10% && 
 bindsym F3 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym F11 exec --no-startup-id xbacklight -dec 10
+bindsym F12 exec --no-startup-id xbacklight -inc 10
+
 exec alacritty
-# exec discord
 # exec --no-startup-id nitrogen --restore &
 exec --no-startup-id  gnome-keyring-daemon --start
 exec sh ~/livewallpaper.sh &
 exec play ~/Data/HK416-Voice-Line/hk416-hello.ogg
+exec discord
