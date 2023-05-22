@@ -119,7 +119,7 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 bind -x $'"\C-l":clear;'
 export EDITOR='/usr/bin/nvim'
-alias ls='ls -lah --color=auto'
+alias ls='ls -lah --color=auto --color=always | less -R'
 alias rm='echo "Do NOT use rm directly! -past me-";false;'
 alias i3-edit='nvim ~/.config/i3/config'
 alias i3status-edit='nvim .config/i3status-rust/config.toml'
