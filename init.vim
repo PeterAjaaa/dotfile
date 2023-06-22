@@ -39,7 +39,6 @@ Plug 'segeljakt/vim-silicon'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-eunuch'
 Plug 'yuezk/vim-js'
-Plug 'windwp/nvim-autopairs'
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
@@ -292,6 +291,4 @@ require("indent_blankline").setup {
     show_end_of_line = true,
     space_char_blankline = " ",
 }
-
-require("nvim-autopairs").setup {}
 EOF
