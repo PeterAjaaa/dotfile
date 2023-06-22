@@ -20,8 +20,6 @@ set spelllang=en_US
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
-autocmd FileType css setl iskeyword+=-
-autocmd FileType scss setl iskeyword+=@-@
 
 call plug#begin()
 
