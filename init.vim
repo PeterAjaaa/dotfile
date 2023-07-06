@@ -21,6 +21,13 @@ set spelllang=en_US
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
 
+au BufNewFile,BufRead *.py set expandtab smarttab autoindent
+
+augroup python_format
+    autocmd!
+    autocmd BufWritePost *.py silent !black % && isort %
+augroup end
+
 call plug#begin()
 
 Plug 'andweeb/presence.nvim'
