@@ -161,6 +161,11 @@ cd() { builtin cd "$@" && ls; }
 
 # Created by `pipx` on 2023-01-16 10:14:09
 export PATH="$PATH:/home/nolaifu/.local/bin"
+
+export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
