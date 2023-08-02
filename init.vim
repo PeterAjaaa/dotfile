@@ -288,6 +288,7 @@ let g:silicon = {
       \   'round-corner':          v:true,
       \   'window-controls':       v:true,
       \ }
+let $FZF_DEFAULT_COMMAND = 'fd --type f --color=always' --exclude .git --ignore-file ~/.gitignore'
 
 lua <<EOF
 vim.opt.list = true

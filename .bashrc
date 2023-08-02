@@ -119,7 +119,8 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 bind -x $'"\C-l":clear;'
 export EDITOR='/usr/bin/nvim'
-alias ls='ls -lah --color=auto --color=always | less -R'
+alias lsf='ls -lah --color=auto --color=always | less -R'
+alias ls='ls -la --color=auto --color=always'
 alias rm='echo "Do NOT use rm directly! -past me-";false;'
 alias i3-edit='nvim ~/.config/i3/config'
 alias i3status-edit='nvim .config/i3status-rust/config.toml'
@@ -155,8 +156,11 @@ alias docker-end='sudo systemctl disable --now docker'
 alias check-governor='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias powersave='sudo x86_energy_perf_policy --turbo-enable 0 && sudo cpupower frequency-set -g powersave && sudo x86_energy_perf_policy 15 && check-governor'
 alias maxperformance='sudo x86_energy_perf_policy --turbo-enable 1 && sudo cpupower frequency-set -g performance && sudo x86_energy_perf_policy 0 && check-governor'
+alias update-all='paru && flatpak update && sudo snap refresh'
 cd() { builtin cd "$@" && ls; }
 
 # Created by `pipx` on 2023-01-16 10:14:09
 export PATH="$PATH:/home/nolaifu/.local/bin"
 source /usr/share/nvm/init-nvm.sh
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
