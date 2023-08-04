@@ -169,3 +169,5 @@ export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+
+neofetch --disable theme icons
