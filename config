@@ -236,6 +236,5 @@ bindsym F12 exec --no-startup-id xbacklight -inc 10
 exec alacritty
 # exec --no-startup-id nitrogen --restore &
 exec --no-startup-id  gnome-keyring-daemon --start
-exec discord
 exec ~/livewallpaper.sh &
 exec play ~/Data/HK416-Voice-Line/hk416-hello.ogg
