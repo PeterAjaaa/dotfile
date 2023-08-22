@@ -159,9 +159,6 @@ alias maxperformance='sudo x86_energy_perf_policy --turbo-enable 1 && sudo cpupo
 alias update-all='paru && flatpak update && sudo snap refresh'
 cd() { builtin cd "$@" && ls; }
 
-# Created by `pipx` on 2023-01-16 10:14:09
-export PATH="$PATH:/home/nolaifu/.local/bin"
-
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
@@ -171,3 +168,5 @@ source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
 neofetch --disable theme icons
+systemd-analyze
+echo -e "\e[3m\e[1mto the stars; through the thorns\e[0m"
