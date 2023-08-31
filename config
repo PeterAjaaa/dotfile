@@ -47,7 +47,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl -- set-source-mute @DEFAULT_
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,7 +189,7 @@ gaps outer 5
 for_window [class=".*"] border pixel 0
 
 # Set background and picom for transparency
-exec --no-startup-id feh --bg-scale ~/Data/Wallpaper/skadi5k.png
+# exec --no-startup-id feh --bg-scale ~/Data/Wallpaper/skadi5k.png
 exec --no-startup-id picom
 
 # Set i3 bar with i3status-rust
@@ -225,7 +225,7 @@ bindsym $mod+shift+x exec betterlockscreen -l
 assign [class="Alacritty"] 1
 assign [class="firefox"] 2
 assign [class="Google-chrome"] 2
-assign [class="Discord"] 3
+assign [class="LibreWolf"] 3
 assign [class="Steam"] 4
 
 bindsym F1 exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -236,8 +236,8 @@ bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym F11 exec --no-startup-id xbacklight -dec 10
 bindsym F12 exec --no-startup-id xbacklight -inc 10
 
-exec alacritty
+exec --no-startup-id alacritty
 # exec --no-startup-id nitrogen --restore &
 exec --no-startup-id  gnome-keyring-daemon --start
-exec_always ~/livewallpaper.sh &
+exec --no-startup-id ~/livewallpaper.sh
 exec play ~/Data/HK416-Voice-Line/hk416-hello.ogg
