@@ -1,6 +1,3 @@
-[user]
-	name = 
-	email = 
 [credential]
 	helper = store
 [init]
@@ -15,3 +12,7 @@
 	editor = nvim 
 [protocol "file"]
 	allow = always
+[includeIf "gitdir:~/folder/path"]
+  path = ~/folder/path/.gitconfig-placeholdername-1
+[includeIf "gitdir:~/folder/path/2"]
+  path = ~/foler/path/.gitconfig-placeholdername-2
