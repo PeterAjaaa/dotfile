@@ -169,8 +169,8 @@ mode "resize" {
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
@@ -239,5 +239,5 @@ bindsym F12 exec --no-startup-id xbacklight -inc 10
 exec --no-startup-id alacritty
 # exec --no-startup-id nitrogen --restore &
 exec --no-startup-id  gnome-keyring-daemon --start
-exec --no-startup-id ~/livewallpaper.sh
-exec play ~/Data/HK416-Voice-Line/hk416-hello.ogg
+exec --no-startup-id ~/livewallpaper.sh & disown
+exec --no-startup-id play ~/Data/HK416-Voice-Line/hk416-hello.ogg
