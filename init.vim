@@ -29,6 +29,9 @@ augroup python_format
     autocmd BufWritePost *.py silent !black % && isort %
 augroup end
 
+" Set leader key to comma (,)
+let mapleader=","
+
 call plug#begin()
 
 Plug 'andweeb/presence.nvim'
