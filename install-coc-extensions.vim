@@ -6,7 +6,10 @@ let g:coc_global_extensions =
   \  'coc-java',
   \  'coc-jedi',
   \  'coc-json',
+  \  'coc-kotlin',
+  \  'coc-pairs',
   \  'coc-pyright',
   \  'coc-rust-analyzer',
+  \  'coc-snippets',
   \  'coc-tsserver'
   \]

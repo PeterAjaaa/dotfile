@@ -262,6 +262,24 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
 " User defined keybinding
 nnoremap <C-o> :NERDTreeToggle %<CR>
 nnoremap <C-t> :NERDTreeToggle <CR>
@@ -296,12 +314,9 @@ let g:silicon = {
 let $FZF_DEFAULT_COMMAND = 'fd --type f --color=always --exclude .git --ignore-file ~/.gitignore'
 
 lua <<EOF
+require("ibl").setup()
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
-require("indent_blankline").setup {
-    show_end_of_line = true,
-    space_char_blankline = " ",
-}
 EOF
