@@ -189,7 +189,6 @@ gaps outer 5
 for_window [class=".*"] border pixel 0
 
 # Set background and picom for transparency
-# exec --no-startup-id feh --bg-scale ~/Data/Wallpaper/skadi5k.png
 exec --no-startup-id picom
 
 # Set i3 bar with i3status-rust
@@ -199,9 +198,9 @@ bar {
 		status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
 		colors {
 			background #2E3440
-				focused_workspace #FFFFFF #434C5E
+			focused_workspace #FFFFFF #434C5E
 		}
-}
+	}
 
 # Normal screenshot
 bindsym Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
@@ -216,7 +215,7 @@ bindsym $mod+F4 exec shutdown -h now
 bindsym $mod+F5 exec reboot
 
 # Set browser keybinding
-bindsym $mod+Home exec firefox
+bindsym $mod+Home exec Google-chrome
 
 # Set lockscreen keybinding
 bindsym $mod+shift+x exec betterlockscreen -l
@@ -227,6 +226,9 @@ assign [class="firefox"] 2
 assign [class="Google-chrome"] 2
 assign [class="LibreWolf"] 3
 assign [class="Steam"] 4
+assign [class="FreeTube"] 10
+# Assigning YouTube app (from the browser), courtesy to https://askubuntu.com/a/1390939
+# for_window [title="YouTube"] move to workspace 10
 
 bindsym F1 exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym F2 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -237,7 +239,7 @@ bindsym F11 exec --no-startup-id xbacklight -dec 10
 bindsym F12 exec --no-startup-id xbacklight -inc 10
 
 exec --no-startup-id alacritty
-# exec --no-startup-id nitrogen --restore &
 exec --no-startup-id  gnome-keyring-daemon --start
-exec --no-startup-id ~/livewallpaper.sh & disown
+exec --no-startup-id ~/livewallpaper.sh
 exec --no-startup-id play ~/Data/HK416-Voice-Line/hk416-hello.ogg
+exec --no-startup-id dbus-update-activation-environment --all
