@@ -220,7 +220,15 @@ glog() {
     setterm -linewrap on
 }
 
+lazygit() {
+    git status .
+    git add .
+    git commit -m "$@"
+    git push origin HEAD
+}
+
 export -f glog
+export -f lazygit
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
