@@ -4,9 +4,6 @@ if command -v termium > /dev/null 2>&1; then
 fi
 ### End of Codeium integration
 
-
-
-
 # Enable the subsequent settings only in interactive sessions
 case $- in
   *i*) ;;
