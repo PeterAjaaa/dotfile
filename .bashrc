@@ -227,6 +227,8 @@ lazygit() {
 export -f glog
 export -f lazygit
 
+export LFS=/mnt/lfs
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
 [[ -s "/home/nolaifu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nolaifu/.sdkman/bin/sdkman-init.sh"
