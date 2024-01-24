@@ -20,7 +20,7 @@ set spelllang=en_US
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
-
+autocmd BufEnter *.slint :setlocal filetype=slint
 au BufNewFile,BufRead *.py set expandtab smarttab autoindent
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
@@ -29,8 +29,8 @@ augroup python_format
     autocmd BufWritePost *.py silent !black % && isort %
 augroup end
 
-" Set leader key to comma (,)
-let mapleader=","
+" Set leader key to comma (SPACE)
+let mapleader=" "
 
 call plug#begin()
 
@@ -50,6 +50,10 @@ Plug 'segeljakt/vim-silicon'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-eunuch'
 Plug 'yuezk/vim-js'
+Plug 'honza/vim-snippets'
+Plug 'Exafunction/codeium.vim'
+Plug 'slint-ui/vim-slint'
+Plug 'neovim/nvim-lspconfig'
 Plug 'ryanoasis/vim-devicons' "Always load this at the very end
 
 call plug#end()
@@ -318,5 +322,5 @@ require("ibl").setup()
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
-
+require'lspconfig'.slint_lsp.setup{}
 EOF
