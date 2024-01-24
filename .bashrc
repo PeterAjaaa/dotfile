@@ -3,7 +3,6 @@ if command -v termium > /dev/null 2>&1; then
   eval "$(termium shell-hook show pre)"
 fi
 ### End of Codeium integration
-
 # Enable the subsequent settings only in interactive sessions
 case $- in
   *i*) ;;
@@ -225,6 +224,10 @@ export -f glog
 export -f lazygit
 
 export LFS=/mnt/lfs
+export MAKEFLAGS=-j9
+export CFLAGS="-march=native -O3"
+export CXXFLAGS="$CFLAGS"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
