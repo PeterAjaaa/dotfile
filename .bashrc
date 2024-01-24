@@ -228,6 +228,7 @@ export MAKEFLAGS=-j9
 export CFLAGS="-march=native -O3"
 export CXXFLAGS="$CFLAGS"
 export PATH="$HOME/.cargo/bin:$PATH"
+export RUSTFLAGS="-C target-cpu=native"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"

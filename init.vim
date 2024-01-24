@@ -23,7 +23,6 @@ autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.ven
 autocmd BufEnter *.slint :setlocal filetype=slint
 au BufNewFile,BufRead *.py set expandtab smarttab autoindent
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
-
 augroup python_format
     autocmd!
     autocmd BufWritePost *.py silent !black % && isort %
@@ -38,7 +37,6 @@ Plug 'andweeb/presence.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -46,20 +44,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'segeljakt/vim-silicon'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-eunuch'
 Plug 'yuezk/vim-js'
 Plug 'honza/vim-snippets'
 Plug 'Exafunction/codeium.vim'
 Plug 'slint-ui/vim-slint'
+Plug 'segeljakt/vim-silicon'
 Plug 'neovim/nvim-lspconfig'
-Plug 'ryanoasis/vim-devicons' "Always load this at the very end
+" For barbar.nvim
+Plug 'nvim-tree/nvim-web-devicons'
+"Always put this at the very last position
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-nnoremap <silent> <F12> :set spell!<CR>
-inoremap <silent> <F12> <C-O>:set spell!<CR>
+" nnoremap <silent> <F12> :set spell!<CR>
+" inoremap <silent> <F12> <C-O>:set spell!<CR>
 
 " This fixes the stacked symbols in the Airline bar
 "if !exists('g:airline_symbols')
@@ -152,14 +153,14 @@ nmap <leader>cl  <Plug>(coc-codelens-action)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+" xmap if <Plug>(coc-funcobj-i)
+" omap if <Plug>(coc-funcobj-i)
+" xmap af <Plug>(coc-funcobj-a)
+" omap af <Plug>(coc-funcobj-a)
+" xmap ic <Plug>(coc-classobj-i)
+" omap ic <Plug>(coc-classobj-i)
+" xmap ac <Plug>(coc-classobj-a)
+" omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
@@ -173,8 +174,8 @@ endif
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
+" nmap <silent> <C-s> <Plug>(coc-range-select)
+" xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
@@ -198,15 +199,15 @@ nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+" nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+" nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+" nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+" nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR> Move to previous/next
+" nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR> Move to previous/next
 
 nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
 nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
@@ -238,12 +239,12 @@ nnoremap <silent>    <A-c> <Cmd>bdelete!<CR>
 "                          :BufferCloseBuffersLeft
 "                          :BufferCloseBuffersRight
 " Magic buffer-picking mode
-nnoremap <silent> <C-p>    <Cmd>BufferPick<CR>
+" nnoremap <silent> <C-p>    <Cmd>BufferPick<CR>
 " Sort automatically by...
-nnoremap <silent> <Space>bb <Cmd>BufferOrderByBufferNumber<CR>
-nnoremap <silent> <Space>bd <Cmd>BufferOrderByDirectory<CR>
-nnoremap <silent> <Space>bl <Cmd>BufferOrderByLanguage<CR>
-nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
+" nnoremap <silent> <Space>bb <Cmd>BufferOrderByBufferNumber<CR>
+" nnoremap <silent> <Space>bd <Cmd>BufferOrderByDirectory<CR>
+" nnoremap <silent> <Space>bl <Cmd>BufferOrderByLanguage<CR>
+" nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
 
 " Other:
 " :BarbarEnable - enables barbar (enabled by default)
@@ -282,7 +283,7 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
-xmap <leader>x  <Plug>(coc-convert-snippet)
+" xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " User defined keybinding
 nnoremap <C-o> :NERDTreeToggle %<CR>
@@ -291,8 +292,7 @@ nnoremap <A-t> :terminal <CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-g> :GFiles<CR>
-"Doesn't really use Rg anyway
-"nnoremap <C-f> :Rg! 
+nnoremap <C-f> :Rg! 
 
 let NERDTreeShowHidden=1
 let g:airline#extensions#coc#enabled = 1
@@ -306,17 +306,18 @@ let g:silicon = {
       \   'shadow-color':       '#555555',
       \   'line-pad':                   2,
       \   'pad-horiz':                 80,
-      \   'pad-vert':                 100,
-      \   'shadow-blur-radius':         0,
-      \   'shadow-offset-x':            0,
-      \   'shadow-offset-y':            0,
-      \   'line-number':           v:true,
-      \   'round-corner':          v:true,
-      \   'window-controls':       v:true,
-      \ }
+	  \   'pad-vert':                  10,
+	  \   'shadow-blur-radius':         0,
+	  \   'shadow-offset-x':            0,
+	  \   'shadow-offset-y':            0,
+	  \   'line-number':           v:true,
+	  \   'round-corner':          v:true,
+	  \   'window-controls':       v:true,
+	  \ }
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f --color=always --exclude .git --ignore-file ~/.gitignore'
 
+" Silicon mapped to SS in visual mode
 lua <<EOF
 require("ibl").setup()
 vim.opt.list = true
