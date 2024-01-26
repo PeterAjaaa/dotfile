@@ -3,6 +3,7 @@ if command -v termium > /dev/null 2>&1; then
   eval "$(termium shell-hook show pre)"
 fi
 ### End of Codeium integration
+
 # Enable the subsequent settings only in interactive sessions
 case $- in
   *i*) ;;
@@ -146,7 +147,7 @@ alias gc='git commit -m'
 alias gp='git push'
 alias gd='git diff'
 alias gl='git log --graph --oneline --decorate'
-alias nv='nvim'
+alias nv='nvim .'
 alias rust-cross-compile='sudo systemctl start --now docker && cross build --target x86_64-unknown-linux-gnu --release && cross build --target x86_64-pc-windows-gnu --release && sudo systemctl stop --now docker'
 alias bluetooth-start='sudo systemctl start --now bluetooth'
 alias bluetooth-end='sudo systemctl disable --now bluetooth'
@@ -174,11 +175,7 @@ source /usr/share/fzf/completion.bash
 # echo -e "\e[3m\e[1msteel your resolve.\e[0m"
 # echo -e "\e[3m\e[1mthe shining beacon in a brave new world.\e[0m"
 
-### Added by Codeium. These lines cannot be automatically removed if modified
-if command -v termium > /dev/null 2>&1; then
-  eval "$(termium shell-hook show post)"
-fi
-### End of Codeium integration
+
 
 shopt -s globstar
 
@@ -233,3 +230,9 @@ export RUSTFLAGS="-C target-cpu=native"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
 [[ -s "/home/nolaifu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nolaifu/.sdkman/bin/sdkman-init.sh"
+
+### Added by Codeium. These lines cannot be automatically removed if modified
+if command -v termium > /dev/null 2>&1; then
+  eval "$(termium shell-hook show post)"
+fi
+### End of Codeium integration
