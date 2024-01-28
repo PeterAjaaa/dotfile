@@ -209,13 +209,13 @@ bindsym Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Print exec scrot -s $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Set shutdown keybinding
-bindsym $mod+F4 exec shutdown -h now
+bindsym $mod+F4 exec ~/poweroff.sh
 
 # Set restart keybinding
-bindsym $mod+F5 exec reboot
+bindsym $mod+F5 exec ~/reboot.sh
 
 # Set browser keybinding
-bindsym $mod+Home exec Google-chrome
+# bindsym $mod+Home exec Google-chrome
 
 # Set lockscreen keybinding
 bindsym $mod+shift+x exec betterlockscreen -l
@@ -224,7 +224,6 @@ bindsym $mod+shift+x exec betterlockscreen -l
 assign [class="Alacritty"] 1
 assign [class="firefox"] 2
 assign [class="Google-chrome"] 2
-assign [class="LibreWolf"] 3
 assign [class="Steam"] 4
 assign [class="FreeTube"] 10
 # Assigning YouTube app (from the browser), courtesy to https://askubuntu.com/a/1390939
@@ -241,5 +240,5 @@ bindsym F12 exec --no-startup-id xbacklight -inc 10
 exec --no-startup-id alacritty
 exec --no-startup-id  gnome-keyring-daemon --start
 exec --no-startup-id ~/livewallpaper.sh
-exec --no-startup-id play ~/Data/HK416-Voice-Line/hk416-hello.ogg
+exec --no-startup-id play ~/Data/HK416-Voice-Line/HK416_FORMATION_JP.ogg
 exec --no-startup-id dbus-update-activation-environment --all
