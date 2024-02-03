@@ -220,6 +220,9 @@ bindsym $mod+F5 exec ~/reboot.sh
 # Set lockscreen keybinding
 bindsym $mod+shift+x exec betterlockscreen -l
 
+# Set output workspace assignment
+bindsym $mod+x move workspace to output next
+
 # Program to workspace assignment
 assign [class="Alacritty"] 1
 assign [class="firefox"] 2

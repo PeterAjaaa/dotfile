@@ -4,6 +4,8 @@ if command -v termium > /dev/null 2>&1; then
 fi
 ### End of Codeium integration
 
+
+
 # Enable the subsequent settings only in interactive sessions
 case $- in
   *i*) ;;
@@ -147,7 +149,7 @@ alias gc='git commit -m'
 alias gp='git push'
 alias gd='git diff'
 alias gl='git log --graph --oneline --decorate'
-alias nv='nvim .'
+alias nv='nvim'
 alias rust-cross-compile='sudo systemctl start --now docker && cross build --target x86_64-unknown-linux-gnu --release && cross build --target x86_64-pc-windows-gnu --release && sudo systemctl stop --now docker'
 alias bluetooth-start='sudo systemctl start --now bluetooth'
 alias bluetooth-end='sudo systemctl disable --now bluetooth'
@@ -222,14 +224,15 @@ export -f lazygit
 
 export LFS=/mnt/lfs
 export MAKEFLAGS=-j9
-export CFLAGS="-march=native -O3"
+export CFLAGS="-march=native -O2 -mfpmath=sse -fomit-frame-pointer -pipe -mpopcnt"
 export CXXFLAGS="$CFLAGS"
 export PATH="$HOME/.cargo/bin:$PATH"
-export RUSTFLAGS="-C target-cpu=native"
+export RUSTFLAGS="-C target-cpu=native opt-level=3 strip=symbols"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
 [[ -s "/home/nolaifu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nolaifu/.sdkman/bin/sdkman-init.sh"
+
 
 ### Added by Codeium. These lines cannot be automatically removed if modified
 if command -v termium > /dev/null 2>&1; then
