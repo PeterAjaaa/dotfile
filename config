@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -223,14 +223,21 @@ bindsym $mod+shift+x exec betterlockscreen -l
 # Set output workspace assignment
 bindsym $mod+x move workspace to output next
 
+popup_during_fullscreen leave_fullscreen
+
 # Program to workspace assignment
 assign [class="Alacritty"] 1
+assign [class="VSCodium"] 1
 assign [class="firefox"] 2
 assign [class="Google-chrome"] 2
 assign [class="Steam"] 4
 assign [class="FreeTube"] 10
+# Courtesy of https://unix.stackexchange.com/a/547892
+assign [class="^Spotify*"] 10
 # Assigning YouTube app (from the browser), courtesy to https://askubuntu.com/a/1390939
 # for_window [title="YouTube"] move to workspace 10
+
+for_window [class="discord"] move to workspace 5
 
 bindsym F1 exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym F2 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -241,7 +248,10 @@ bindsym F11 exec --no-startup-id xbacklight -dec 10
 bindsym F12 exec --no-startup-id xbacklight -inc 10
 
 exec --no-startup-id alacritty
+exec --no-startup-id discord 
 exec --no-startup-id  gnome-keyring-daemon --start
 exec --no-startup-id ~/livewallpaper.sh
 exec --no-startup-id play ~/Data/HK416-Voice-Line/HK416_FORMATION_JP.ogg
+exec --no-startup-id lxqt-policykit-agent
 exec --no-startup-id dbus-update-activation-environment --all
+exec_always --no-startup-id autotiling

@@ -160,7 +160,7 @@ alias check-governor='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias powersave='sudo x86_energy_perf_policy --turbo-enable 0 && sudo cpupower frequency-set -g powersave && sudo x86_energy_perf_policy 15 && check-governor'
 alias maxperformance='sudo x86_energy_perf_policy --turbo-enable 1 && sudo cpupower frequency-set -g performance && sudo x86_energy_perf_policy 0 && check-governor'
 alias update-all='paru && flatpak update && sudo snap refresh'
-alias veadotube='exec ./Downloads/veadotube\ mini/veadotube\ mini.x86_64 2>&1>/dev/null &exit'
+alias code='codium'
 cd() { builtin cd "$@" && ls; }
 
 export FZF_DEFAULT_COMMAND="fd . $HOME"
@@ -226,12 +226,10 @@ export LFS=/mnt/lfs
 export MAKEFLAGS=-j9
 export CFLAGS="-march=native -O2 -mfpmath=sse -fomit-frame-pointer -pipe -mpopcnt"
 export CXXFLAGS="$CFLAGS"
-export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
 export RUSTFLAGS="-C target-cpu=native opt-level=3 strip=symbols"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/nolaifu/.sdkman"
-[[ -s "/home/nolaifu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nolaifu/.sdkman/bin/sdkman-init.sh"
+export RUSTC_WRAPPER="sccache"
+export GTK_THEME="Adwaita:dark"
 
 
 ### Added by Codeium. These lines cannot be automatically removed if modified
@@ -239,3 +237,7 @@ if command -v termium > /dev/null 2>&1; then
   eval "$(termium shell-hook show post)"
 fi
 ### End of Codeium integration
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/nolaifu/.sdkman"
+[[ -s "/home/nolaifu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nolaifu/.sdkman/bin/sdkman-init.sh"
