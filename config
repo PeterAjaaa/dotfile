@@ -215,8 +215,8 @@ bindsym $mod+F4 exec ~/poweroff.sh
 bindsym $mod+F5 exec ~/reboot.sh
 
 # Set browser keybinding
-bindsym $mod+Home exec Google-chrome
-
+bindsym $mod+Home exec google-chrome-stabl
+e
 # Set Spotify keybinding
 bindsym $mod+Prior exec spotify-launcher
 
