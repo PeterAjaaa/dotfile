@@ -229,7 +229,6 @@ export CFLAGS="-march=native -O2 -mfpmath=sse -fomit-frame-pointer -pipe -mpopcn
 export CXXFLAGS="$CFLAGS"
 #export PATH="$HOME/.cargo/bin:$PATH"
 export RUSTFLAGS="-C target-cpu=native opt-level=3 strip=symbols"
-export RUSTC_WRAPPER="sccache"
 export GTK_THEME="Adwaita:dark"
 
 
