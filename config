@@ -253,7 +253,8 @@ bindsym F12 exec --no-startup-id xbacklight -inc 10
 exec --no-startup-id alacritty
 exec --no-startup-id discord 
 exec --no-startup-id  gnome-keyring-daemon --start
-exec --no-startup-id ~/livewallpaper.sh
+#exec --no-startup-id ~/livewallpaper.sh
+exec --no-startup-id nitrogen --restore & 
 exec --no-startup-id play ~/Data/HK416-Voice-Line/HK416_FORMATION_JP.ogg
 exec --no-startup-id lxqt-policykit-agent
 exec --no-startup-id blueman-applet
