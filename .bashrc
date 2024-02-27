@@ -1,8 +1,4 @@
-### Added by Codeium. These lines cannot be automatically removed if modified
-if command -v termium > /dev/null 2>&1; then
-  eval "$(termium shell-hook show pre)"
-fi
-### End of Codeium integration
+
 
 
 
@@ -224,6 +220,7 @@ export -f glog
 export -f lazygit
 
 export LFS=/mnt/lfs
+export PROJECTAPOPHIS=/mnt/ProjectApophis
 export MAKEFLAGS=-j9
 export CFLAGS="-march=native -O2 -mfpmath=sse -fomit-frame-pointer -pipe -mpopcnt"
 export CXXFLAGS="$CFLAGS"
@@ -232,11 +229,7 @@ export RUSTFLAGS="-C target-cpu=native opt-level=3 strip=symbols"
 export GTK_THEME="Adwaita:dark"
 
 
-### Added by Codeium. These lines cannot be automatically removed if modified
-if command -v termium > /dev/null 2>&1; then
-  eval "$(termium shell-hook show post)"
-fi
-### End of Codeium integration
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
