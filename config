@@ -250,6 +250,7 @@ bindsym F11 exec --no-startup-id xbacklight -dec 10
 bindsym F12 exec --no-startup-id xbacklight -inc 10
 
 #exec --no-startup-id alacritty
+exec --no-startup-id warp-terminal
 exec --no-startup-id discord 
 exec --no-startup-id  gnome-keyring-daemon --start
 #exec --no-startup-id ~/livewallpaper.sh
