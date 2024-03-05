@@ -1,7 +1,6 @@
 bind -x $'"\C-l":clear;'
 export EDITOR='/usr/bin/nvim'
-alias lsf='ls -lah --color=auto --color=always | less -R'
-alias ls='lsd -la --color=auto --color=always'
+alias ls='lsd -la'
 alias i3-edit='nvim ~/.config/i3/config'
 alias i3status-edit='nvim .config/i3status-rust/config.toml'
 alias picom-edit='nvim .config/picom.conf'
