@@ -226,7 +226,7 @@ bindsym $mod+shift+x exec betterlockscreen -l
 bindsym $mod+x move workspace to output next
 
 # Set dunst close all notification keybind
-bindsym $mod+space exec dunstctl close-all
+bindsym $mod+Delete exec dunstctl close-all
 
 popup_during_fullscreen leave_fullscreen
 
