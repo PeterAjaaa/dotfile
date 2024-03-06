@@ -228,6 +228,9 @@ bindsym $mod+x move workspace to output next
 # Set dunst close all notification keybind
 bindsym $mod+Delete exec dunstctl close-all
 
+# Set VSCodium keybind
+bindsym $mod+Next exec vscodium
+
 popup_during_fullscreen leave_fullscreen
 
 # Program to workspace assignment
