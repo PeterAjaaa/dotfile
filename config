@@ -247,10 +247,10 @@ assign [class="^Spotify*"] 10
 
 for_window [class="discord"] move to workspace 5
 
-bindsym F1 exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym F2 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym F3 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#bindsym F1 exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym F2 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym F3 exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+#bindsym F4 exec --no-startup-id pactl -- set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 bindsym F11 exec --no-startup-id xbacklight -dec 10
 bindsym F12 exec --no-startup-id xbacklight -inc 10
