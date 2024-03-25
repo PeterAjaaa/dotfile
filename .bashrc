@@ -102,8 +102,10 @@ export MAKEFLAGS='-j8'
 export CFLAGS="-march=native -O2 -mfpmath=sse -fomit-frame-pointer -pipe -mpopcnt"
 export CXXFLAGS="$CFLAGS"
 #export PATH="$HOME/.cargo/bin:$PATH"
-export RUSTFLAGS="-C target-cpu=native opt-level=3 strip=symbols"
+export RUSTFLAGS="-C target-cpu=native"
 export GTK_THEME="Adwaita:dark"
+# For DaVinci Resolve
+export RUSTICL_ENABLE="iris"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nolaifu/.sdkman"
