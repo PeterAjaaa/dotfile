@@ -3,7 +3,7 @@ import = [
 ]
 
 [window]
-opacity = 0
+opacity = 0.9
 
 [font]
 normal = {family = "JetBrainsMono Nerd Font", style = "Medium" }
