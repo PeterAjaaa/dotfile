@@ -16,17 +16,22 @@ icons = "material-nf"
 #format = " $icon root: $available.eng(w:2) "
 
 [[block]]
-block = "music"
-player = "spotify"
-[[block.click]]
-button = "left"
-action = "play_pause"
-[[block.click]]
-button = "up"
-action = "volume_up"
-[[block.click]]
-button = "down"
-action = "volume_down"
+block = "focused_window"
+[block.format]
+full = " $title.str(max_w:30) |"
+
+#[[block]]
+#block = "music"
+#player = "spotify"
+#[[block.click]]
+#button = "left"
+#action = "play_pause"
+#[[block.click]]
+#button = "up"
+#action = "volume_up"
+#[[block.click]]
+#button = "down"
+#action = "volume_down"
 
 [[block]]
 block = "disk_space"
