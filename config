@@ -188,7 +188,7 @@ gaps outer 5
 for_window [class=".*"] border pixel 0
 
 # Set background and picom for transparency
-#exec --no-startup-id picom
+exec --no-startup-id picom
 
 # Set i3 bar with i3status-rust
 bar {
