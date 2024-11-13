@@ -136,6 +136,7 @@ alias gs='git status -uall'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
+alias gpl='git pull'
 alias gd='git diff'
 alias gl='git log --graph --oneline --decorate'
 alias nv='nvim'
@@ -8308,3 +8309,10 @@ if [[ "${BASH_VERSINFO[0]}" -eq 4 && "${BASH_VERSINFO[1]}" -ge 4 || "${BASH_VERS
 else
     complete -F _warp-cli -o bashdefault -o default warp-cli
 fi
+
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
