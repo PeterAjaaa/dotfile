@@ -262,7 +262,7 @@ exec --no-startup-id  gnome-keyring-daemon --start
 exec --no-startup-id nitrogen --restore & 
 exec --no-startup-id play ~/Data/HK416-Voice-Line/HK416_FORMATION_JP.ogg
 exec --no-startup-id lxqt-policykit-agent
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
 exec --no-startup-id dbus-update-activation-environment --all
 exec_always --no-startup-id autotiling
-exec --no-startup-id warp-cli connect
+#exec --no-startup-id warp-cli connect
